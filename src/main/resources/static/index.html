@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px #ccc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 11px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>Student Registration</h2>
+
+    <form action="/register" method="POST">
+
+        <input type="text" name="studentName"
+               placeholder="Student Name" required>
+
+        <input type="text" name="rollNumber"
+               placeholder="Roll Number" required>
+
+        <input type="email" name="email"
+               placeholder="Email Address" required>
+
+        <select name="course" required>
+            <option value="">Select Course</option>
+            <option value="CSE">Computer Science</option>
+            <option value="Data Science">Data Science</option>
+            <option value="IT">Information Technology</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
